@@ -1,0 +1,49 @@
+<html>
+<head>
+<metacharset="utf-8">
+<style>
+.accordion{
+           width:95%;
+           margin:0 auto;
+           color:#fff;
+}
+.a-o{padding:10px;
+     margin-top:2px;
+     background:#0bd;
+     border:2px solid rgb(0,0,0);
+     cursor:pointer;}
+.a-i{padding:10px;
+     background:pink;
+     border:2px solid #000;
+     height:200px;
+     display:none;}
+img{width:33%;
+    padding:1px;
+    margin:0;
+    height:200px;}
+span{display:flex;}
+</style>
+</head>
+<body>
+<h1>練習</h1>
+
+<div class="accordion">
+ <div class="a-o">メニュー</div>
+ <div class="a-i">コンテンツ</div>
+ <div class="a-o">メニュー</div>
+ <div class="a-i">コンテンツ</div>
+ <div class="a-o">メニュー</div>
+ <div class="a-i">コンテンツ</div>
+</div>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+$(function(){
+  $(".a-o").click(function(){
+    $(this).next().slideToggle();
+    $(".a-o").not(this).removeClass("open").next().slideUp();
+
+  });
+});
+</script>
+</body>
+</html>
