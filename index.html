@@ -1,38 +1,66 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<metacharset="utf-8">
-<style>
-.accordion{
-           width:55%;
-           margin:0 auto;
-           color:#fff;
-}
-.a-o{padding:10px;
-     margin-top:2px;
-     background:#0bd;
-     border:2px solid rgb(0,0,0);
-     cursor:pointer;}
-.a-i{padding:10px;
-     background:pink;
-     border:2px solid #000;
-     height:200px;
-     display:none;}
-img{width:33%;
-    padding:1px;
-    margin:0;
-    height:200px;}
-span{display:flex;}
-</style>
-</head>
+<meta charset=utf-8>
+
+<title>スライダー</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 <body>
-        
-<h1>練習</h1>
-<img src="./nihon3.jpg">
-<div class="accordion">
- <div class="a-o">メニュー</div>
- <div class="a-i">コンテンツ</div>
- <div class="a-o">メニュー</div>
- <div class="a-i">コンテンツ</div>
+<div class="kyouyu">
+<h1>MY friend IS portfolio</h1>
+<div id="container">
+  <div class="circle icon">
+    <span class="bar top"></span>
+    <span class="bar middle"></span>
+    <span class="bar bottom"></span>
+  </div>
+  </div>
+</div>
+<ul class="sub">
+  <li><a href="#">メニュー1</a></li>
+  <li><a href="#">メニュー1</a></li>
+  <li><a href="#">メニュー1</a></li>
+  <li><a href="#">メニュー1</a></li>
+  <li><a href="#">メニュー1</a></li>
+  <li><a href="#">メニュー1</a></li>
+  <li><a href="#">メニュー1</a></li>
+  <li><a href="#">メニュー1</a></li>
+</ul>
+<div class="main">
+<img src="image/9.jpg"class="mainga"alt="gazoudesu">
+</div>
+<div class="slider">
+  <img src="image/7.jpg"alt="ga">
+  <img src="image/8.jpg"alt="ga">
+  <img src="image/10.jpg"alt="ga">
+  <img src="image/11.jpg"alt="ga">
+</div>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/test.js"></script>
+<script>
+$("#container").click(function(){
+  $(".icon").toggleClass("close");
+});
+$("#container").click(function(){
+  $(".sub").slideToggle(2000);
+});
+$(function(){
+  $(".slider").slick({
+  autoplay:true,
+  autoplaySpeed:3000,
+    arrow:true,
+    dots:true,
+    centerMode:true,
+    centerPadding:"80px"
+  });
+});
+</script>
+</body>
+</html>
  <div class="a-o">メニュー</div>
  <div class="a-i">コンテンツ</div>
 </div>
