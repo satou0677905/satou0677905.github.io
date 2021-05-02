@@ -3,72 +3,23 @@
 <html lang="ja">
 <head>
 <meta charset=utf-8>
-
+<style>
+.abc{background:red;
+     width:20px;
+     height:20px;}
+</style>
 <title>スライダー</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/slick.css">
-<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-<body>
-<div class="kyouyu">
-<h1>MY friend IS portfolio</h1>
-<div id="container">
-  <div class="circle icon">
-    <span class="bar top"></span>
-    <span class="bar middle"></span>
-    <span class="bar bottom"></span>
-  </div>
-  </div>
-</div>
-<ul class="sub">
-  <li><a href="#">メニュー1</a></li>
-  <li><a href="#">メニュー1</a></li>
-  <li><a href="#">メニュー1</a></li>
-  <li><a href="#">メニュー1</a></li>
-  <li><a href="#">メニュー1</a></li>
-  <li><a href="#">メニュー1</a></li>
-  <li><a href="#">メニュー1</a></li>
-  <li><a href="#">メニュー1</a></li>
-</ul>
-<div class="main">
-<img src="image/9.jpg"class="mainga"alt="gazoudesu">
-</div>
-<div class="slider">
-  <img src="image/7.jpg"alt="ga">
-  <img src="image/8.jpg"alt="ga">
-  <img src="image/10.jpg"alt="ga">
-  <img src="image/11.jpg"alt="ga">
-</div>
-  <script src="jquery-3.4.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/test.js"></script>
-<script>
-$("#container").click(function(){
-  $(".icon").toggleClass("close");
-});
-$("#container").click(function(){
-  $(".sub").slideToggle(2000);
-});
-$(function(){
-  $(".slider").slick({
-  autoplay:true,
-  autoplaySpeed:3000,
-    arrow:true,
-    dots:true,
-    centerMode:true,
-    centerPadding:"80px"
-  });
-});
-</script>
-</body>
-</html>
 
+<body>
+<div class="abc">abc</div>
 <script src="jquery-3.4.1.min.js"></script>
 <script>
 $(function(){
-  $(".a-o").click(function(){
-    $(this).next().slideToggle();
-    $(".a-o").not(this).removeClass("open").next().slideUp();
-
+  $(".abc").click(function(){
+    $(this).animate({
+      width:'150px',
+      height:'150px'
+    });
   });
 });
 </script>
