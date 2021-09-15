@@ -1,0 +1,67 @@
+/*news.html設定*/
+.btn-menu{background:#000;
+                   position:absolute;
+                   top:12px;
+                   right:12px;
+                   border:1px solid rgba(255,255,255,.5);
+                   color:white;
+                    padding:.5rem 1rem;
+                    }
+
+.main-nav{
+                  background:rgba(255,255,255,.5);
+                  width:0;
+                  position:absolute;
+                  z-index:2;
+                  top:50px;
+                  right:0;
+                  overflow:hidden;
+                  transition:.9s;}
+.main-nav li{
+                      text-align:center;
+                      margin:2rem 0;
+                      list-style:none;}
+.main-nav a{text-decoration:none;
+                      display:block;}
+
+.main-nav.open-menu{
+                                      width:100%;}
+
+
+
+/*body設定*/
+body{padding:0;
+           magin:0;
+          background:pink;}
+.head{
+          background-image:url(../images/kawa.jpg);
+         
+    background-size:cover;
+    background-repeat:no-repeat;
+    }
+
+/*背景画像に字を重ねる。*/
+
+h1{font-size:6rem;
+     text-align:center;
+     font-weight:bold;
+     padding-top:1px;
+     mix-blend-mode:overlay;}
+
+/*news設定*/
+
+.news{display:flex;
+         border-top:3px dashed #000; }
+
+.abc{width:65%;
+        padding-left:13px;}
+.abc img{width:95%;}
+.def{width:35%;}
+.def img{width:95%;}
+
+h2{color:orange;
+     background:#fff;
+     border-radius:50%;
+     width:30%;
+     text-align:center;}
+
